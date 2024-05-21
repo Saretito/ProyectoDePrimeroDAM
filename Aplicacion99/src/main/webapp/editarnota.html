@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+ <title>Editar nota</title>
+ <link rel="stylesheet" href="Vista/creanota.css">
+<script src="editar.js"></script>
+</head>
+<body>
+<div class="cajatodo">
+    <header class="barraheader">
+        <h1 class="tituloh">Edita</h1>
+    </header>
+<nav class="barranav">
+    
+        <a class="link" href="listar.html">Ver mis notas</a>
+        <a class="link" href="index.html">Volver</a>
+    
+</nav>
+ 
+
+    <section class="barrasec">
+     
+        <div class="formulariocl">
+            <form action="SNota" method="post" >
+                <h2 class="titule">Editar la nota</h2>
+                <div class="icontenedor">
+                    <label class="labelcl" for="titnota">Titulo editado</label>
+                    <input class="cajatexto" type="text" name="escribetitulo"  id="titnota" required>
+                </div>
+                <div class="icontenedort">                      
+					<label class="labelcl" for="contnota"><strong>Nota:</strong></label>
+                     <textarea class="cajatextot" name="escribenota" id="contnota" cols="30" rows="10">Escribe aqui tu nueva nota</textarea>
+                </div>
+                
+                <div>        
+					<a class="link" href="listar.html">
+						<button type="submit" class="botoncute">Guardar nota</button>
+           			</a>
+           		</div>
+            </form>
+            
+        </div>
+     
+    </section>
+    <footer class="barrafoot">
+                <a  href="google.com">Contacta con nosotros</a>
+                <p >&copy; 2024 Adnotation. Todos los derechos reservados.</p>
+        
+    </footer>
+</div>
+    <section>
+        <div class="contenedor">
+        
+        </div>
+    </section>
+</body>
+</html>

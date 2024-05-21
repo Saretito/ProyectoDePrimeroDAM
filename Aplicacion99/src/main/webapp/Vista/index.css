@@ -1,0 +1,106 @@
+@charset "ISO-8859-1";
+*{
+    padding: 0%;
+    margin: 0%;
+}
+/* BODY */
+
+.cajab{
+   
+    width: 90%;
+    padding: 5%;
+    background-color: #669661;
+}
+
+/* HEADER */
+.headers {
+    border-color: #5E472C;
+    border: 3px;
+    background-color: #96BF8F;
+    top: 0%;
+    height: 50px;
+    width: 100%;
+}
+
+.titulo {
+    font-family: 'Arial Rounded MT', Arial;
+    font-size: 2rem;
+    color: #5E472C;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/* SECTION */
+section {
+    background-color: #BADDB4;
+    border-radius: 3%; /*redondea borde*/
+    border-color: #5E472C;
+    border-style:solid ;
+    top: 80px;
+    height: 700px;
+    width: 100%;
+    display: flex; 
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Botón */
+.botoncute {
+    background-color: #669661; 
+    border: none; 
+    color: #c4e1bf; 
+    padding: 30px 64px; 
+    text-align: center; 
+    font-size: 3rem; 
+
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como elemento en línea */
+    margin: 8px 4px; 
+    cursor: pointer; /* Cambiar cursor */
+    border-radius: 20px; /* Borde redondeado */
+    transition-duration: 0.4s; /* Duración de la transición */
+    box-shadow: 0px 8px 16px 0px #5E472C; /* Sombra */
+}
+.botoncute a{
+    font-family: 'Arial Rounded MT', Arial;
+    font-size: 3rem; 
+    color: #c4e1bf; 
+    text-decoration: none;
+}
+
+.botoncute:hover {
+    background-color: #B1916E; /* Color de fondo al pasar el mouse */
+    border-radius: 30px; /* Borde aún más redondeado */
+    box-shadow: 0px 12px 20px 0px #5E472C; /* Sombra más pronunciada */
+}
+
+.botoncute:active {
+    background-color: #669661; /* Color de fondo al hacer clic */
+    transform: translateY(4px); /* Desplazar hacia abajo al hacer clic */
+}
+
+
+
+
+
+
+/* FOOTER */
+footer {   
+    background-color: #669661;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+.letrafoot {
+    color: #5E472C;
+    font-family: 'Arial Rounded MT', Arial;
+    padding: 10px;
+}

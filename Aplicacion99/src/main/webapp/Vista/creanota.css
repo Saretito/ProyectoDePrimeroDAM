@@ -1,0 +1,193 @@
+@charset "ISO-8859-1";
+                           
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+                /* HEADER */
+.cajatodo{
+   
+    width: 90%;
+    padding: 5%;
+    background-color: #669661;
+}
+.barraheader{
+    border-color: #5E472C;
+    border: 3px;
+    background-color: #96BF8F;
+    top: 0%;
+    height: 50px;
+    width: 100%;
+}
+
+.tituloh{
+    font-family: 'Arial Rounded MT', Arial;
+    font-size: 2rem;
+    color: #5E472C;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 1px 1px 2px #669661;
+
+}
+
+
+                            /* NAV */
+
+
+.barranav{
+    background-color: #B1916E;
+    border-radius: 2%; /*redondea borde*/
+
+    top: 50px;
+    height: 30px;
+    width: 100%;
+    
+}
+
+.link{
+    font-family: 'Arial Rounded MT', Arial;
+    color: #5E472C;
+    text-shadow: 1px 1px 2px #669661;
+
+}
+
+                            /* SECTION */
+.barrasec{
+    background-color: #BADDB4;
+    border-radius: 3%; /*redondea borde*/
+    border-color: #5E472C;
+    border-style:solid ;
+    top: 80px;
+    height: 700px;
+    width: 100%;
+
+}
+                        /* FORMULARIO */
+.formulariocl{
+text-align: center;
+width: 100%;
+height: 100%;
+color: #5E472C;
+font-family: 'Arial Rounded MT', Arial;
+grid-template-areas: 
+'titulo'
+'titulon'
+'contenido'
+'boton';
+}
+
+                    /* TITULOFORM */
+
+.titule{
+font-weight: bold;
+padding: 40px;
+font-size: 3em;
+text-shadow: 1px 1px 2px #669661;
+
+
+}
+                /* DIV CONTENEDOR DE INGRESO TITULO */
+
+.icontenedor{
+    padding: 40px;
+
+}
+            /* CAJA DE TEXTO ESCRIBIR TITULO*/
+
+.cajatexto{
+border: 2px solid #5E472C; 
+border-radius: 5px; 
+background-color:#B1916E;
+color: #5E472C;
+font-family: 'Arial Rounded MT', Arial;
+height: 50px;
+width: 300px;
+box-shadow: 1px 1px 2px #5E472C;
+
+
+}
+                /* DIV CONTENEDOR DE INGRESO NOTA */
+
+.icontenedort{
+    padding: 40px;
+
+}
+            /* CAJA DE TEXTO ESCRIBIR NOTA*/
+
+.cajatextot{
+
+    border: 2px solid #5E472C; 
+    border-radius: 5px; 
+    background-color:#B1916E;
+    color: #5E472C;
+    font-family: 'Arial Rounded MT', Arial;
+    height: 100px;
+    width: 400px;
+    max-width: 800px;
+    max-height: 380px;
+    box-shadow: 1px 1px 2px #5E472C;
+
+}
+            /* LABELS CAJAS DE TEXO */
+
+.labelcl{
+    color: #5E472C;
+    font-family: 'Arial Rounded MT', Arial;
+    text-shadow: 1px 1px 2px #669661;
+
+}
+                    /* BOTON SUBMIT */
+
+/* Botón */
+.botoncute {
+    background-color: #669661; 
+    border: none; 
+    color: #c4e1bf; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como elemento en línea */
+    font-family: 'Arial Rounded MT', Arial;
+    font-size: 1rem; 
+    margin: 4px 2px; 
+    cursor: pointer; /* Cambiar cursor */
+    border-radius: 20px; /* Borde redondeado */
+    transition-duration: 0.4s; /* Duración de la transición */
+    box-shadow: 0px 8px 16px 0px #5E472C; /* Sombra */
+}
+
+.botoncute:hover {
+    background-color: #B1916E; /* Color de fondo al pasar el mouse */
+    border-radius: 30px; /* Borde aún más redondeado */
+    box-shadow: 0px 12px 20px 0px #5E472C; /* Sombra más pronunciada */
+}
+
+.botoncute:active {
+    background-color: #669661; /* Color de fondo al hacer clic */
+    transform: translateY(4px); /* Desplazar hacia abajo al hacer clic */
+}
+
+
+
+                            /* FOOTER */
+.barrafoot{
+    background-color: #669661;
+    
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+   /* line-height: 50px; /* para centrar el texto*/
+   
+
+}
+            /* TEXTO DEL FOOTER */
+
+.barrafoot a, p{
+    color: #5E472C;
+    font-family: 'Arial Rounded MT', Arial;
+
+}
