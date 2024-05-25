@@ -40,7 +40,14 @@ cree un objeto. (no olvidar poner el método insertar en la clase-Nota).
 // Ejecución de la sentencia SQL
 		int filas = ps.executeUpdate();
 		ps.close();
+		System.out.println("DAO: INSERTADO");
 	}
+	/**
+	 * Metodo que devuelve informacion  de la BD segun el parametro ID.
+	 * @param Id_nota El parametro Id es un atributo que identifica las tuplas.
+	 * @return Devuelve un objeto nota, que tiene Id, y dos Strings que corresponden al titulo y contenido de la nota.
+	 * @throws SQLException
+	 */
 	
 	public Nota obtenerPorID(int Id_nota) throws SQLException {
 		String sql = "SELECT * FROM notas WHERE Id_nota=?";
@@ -49,12 +56,39 @@ cree un objeto. (no olvidar poner el método insertar en la clase-Nota).
 		ResultSet rs = ps.executeQuery();
 		rs.next();
 		Nota ne = new Nota (rs.getInt(1), rs.getString(2), rs.getString(3));
-		
+		System.out.println("DAO : DEVOLVIENDO DATOS");
 		return ne;
 	}
+	/**
+	 * Metodo para actualizar la informacion de un objeto determinado por su id.
+	 * @param id con este parametro es un atributo del objeto nota que las identifica. 
+	 * @return Devuelve un objeto nota, que tiene Id y dos Strings, el titulo y el contenido. 
+	 * @throws SQLException
+	 */
+	
+	public void actualizar(Nota n) throws SQLException {
+		String sql = "UPDATE notas SET titulo=?,contenido=? WHERE Id_nota=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, n.getTitulo());
+		ps.setString(2, n.getContenido());
+		ps.setInt(3, n.getId_nota());
+
+// Ejecución de la sentencia SQL
+		int filas = ps.executeUpdate();
+		ps.close();
+		System.out.println("DAO: ACTUALIZANDO");
+	} 
 	
 	
-	
+	public void borrar(int id) throws SQLException {
+		String sql = "DELETE FROM notas WHERE Id_nota=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, id);
+
+		int filas = ps.executeUpdate();
+		ps.close();
+		System.out.println("DAO: BORRANDO");
+	}
 /*
 Creo un método que llame a los datos con un SELECT a la base de datos. 
 Será un método público que devuelve un ArrayList de los objetos (y puede recibir parámetros para filtrar la lista si por ejemplo en la zona resaltada metemos String titulo y modificamos la query de sql) que contiene:

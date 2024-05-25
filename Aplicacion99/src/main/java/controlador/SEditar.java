@@ -1,5 +1,6 @@
-package controlador;
 
+package controlador;
+ 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -15,6 +16,7 @@ import java.sql.SQLException;
 /**
  * Servlet implementation class SEditar
  */
+
 public class SEditar extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -27,6 +29,7 @@ public class SEditar extends HttpServlet {
     }
 
 	/**
+	 * Metodo GET que maneja los datos que llegan del boton del formulario(id) y solicita los demás datos de su tupla a
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,9 +38,8 @@ public class SEditar extends HttpServlet {
 
 		int Id_nota = Integer.parseInt(request.getParameter("Id_nota"));
 	//	int opcion = Integer.parseInt(request.getParameter("op"));
-		System.out.println("recibido Id_nota:" + Id_nota);
+		System.out.println("recibido SEditar Id_nota:" + Id_nota);
 		
-			//logica edicion
 			Nota ne = new Nota();
 			try {
 				ne.obtenerPorID(Id_nota);
@@ -47,9 +49,7 @@ public class SEditar extends HttpServlet {
 				PrintWriter out = response.getWriter();
 				String json = ne.dameJson();
 				out.print(ne.dameJson());
-				System.out.println("hola??");
-				System.out.println(ne.dameJson());
-				System.out.println(ne.toString());
+				System.out.println("Servlet Editar imprime:"+ne.toString());
 				out.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -64,10 +64,34 @@ public class SEditar extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-        doGet(request, response);
 
+	
+		String titulo = request.getParameter("escribetitulo");
+		String contenido = request.getParameter("escribenota");
+		String ide = request.getParameter("Id_nota");
+		System.out.println(contenido);
+		System.out.println(titulo);
 
-			
+		System.out.println(ide);
+
+		int id = Integer.parseInt(ide);
+		
+		
+			Nota ne = new Nota(id, titulo, contenido);
+			try {
+				ne.obtenerPorID(id);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		Nota nee = new Nota(id, titulo, contenido);
+		try {
+			nee.actualizar();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		response.sendRedirect("listar.html");
 	}
-
 }

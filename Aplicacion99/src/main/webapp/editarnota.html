@@ -22,7 +22,8 @@
     <section class="barrasec">
      
         <div class="formulariocl">
-            <form action="SNota" method="post" >
+            <form action="SEditar" method="post" >
+            <input type="hidden" id="Id_nota" name="Id_nota" value="" >
                 <h2 class="titule">Editar la nota</h2>
                 <div class="icontenedor">
                     <label class="labelcl" for="titnota">Titulo editado</label>
@@ -32,10 +33,10 @@
 					<label class="labelcl" for="contnota"><strong>Nota:</strong></label>
                      <textarea class="cajatextot" name="escribenota" id="contnota" cols="30" rows="10">Escribe aqui tu nueva nota</textarea>
                 </div>
-                
+                  
                 <div>        
 					<a class="link" href="listar.html">
-						<button type="submit" class="botoncute">Guardar nota</button>
+						<button type="submit" class="botoncute" >Guardar nota</button>
            			</a>
            		</div>
             </form>

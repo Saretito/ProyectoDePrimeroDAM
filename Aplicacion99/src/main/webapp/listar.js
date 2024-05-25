@@ -42,9 +42,8 @@ window.onload = function(){
         // lo suyo es hacer el editar en otro servlet
       //  html += "<button class='botonedit'><a href='nuevanota.html?Id_nota="+resultados[i].id_nota+"'>Editar</a></button>"; 
           
-         // html+= "<a class="+link+" href="+listar.html+">";
           html += "<button class='botonedit' onclick='llamadaeditar(" + resultados[i].id_nota + ")'>Editar</button>";	
-         // html +="</a>"
+          html += "<button id='botonborrar' onclick='llamadaborrar("+resultados[i].id_nota+")'>Borrar</button>";	
 		  html += "</div>";
         
 		}
@@ -71,11 +70,51 @@ function llamadaeditar(Id_nota) {
         }
     };
 
-    xhr.open("GET", "SEditar?Id_nota=" + Id_nota, true); // Abre una nueva solicitud GET al servlet SEditar con el Id_nota correspondiente
+    xhr.open("GET", "SListar", true); // Abre una nueva solicitud GET al servlet SEditar con el Id_nota correspondiente
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(); // Enviar la solicitud
     window.location.href = "editarnota.html?Id_nota=" + Id_nota; // Redirige a editarnota.html con el parámetro Id_nota
 }
+
+/////////////////////////////////////
+    
 	
+function llamadaborrar(id_nota) {
+    let estasseguro = confirm("¿Estás seguro de que deseas borrar esta nota?");
+    let id = id_nota
+    if (estasseguro) {
 	
+        borrar(id);
+        console.log(id);
+    } else {
+        alert("No se ha borrado");
+    }
+	}
+	function borrar(id){
+	let xhr = new XMLHttpRequest(); // Ejecuta cada estado de la conexión, la última es la 4
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) { // Verifica que no hay mensaje distinto a 200
+                try {
+                    console.log(id);
+                    llamadalistar(); // Refresca la lista después de borrar
+                } catch (e) {
+                    console.error('Error borrando', e);
+                }
+            } else {
+                console.error('Error:', xhr.statusText);
+            }
+        }
+    };
+
+    xhr.open("GET", "SBorrar?Id_nota=" + id, true); // get o post, nombreServlet y el id
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send();
+    console.log(id);
+}
 	
+	///////////////////////////////////
+	function ira(){
+		    window.location.href = "editarnota.html?Id_nota=" + Id_nota; // Redirige a editarnota.html con el parámetro Id_nota
+
+	}

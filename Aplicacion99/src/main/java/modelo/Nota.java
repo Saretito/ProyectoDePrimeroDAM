@@ -114,7 +114,6 @@ public class Nota {
 	}
 
 	/**
-	 * Metodo insertar que llama al dao 
 	 * @throws SQLException
 	 */
 	
@@ -148,6 +147,17 @@ public class Nota {
 		Gson gson = new Gson();
 		json = gson.toJson(this);
 		return json;
+	}
+	
+	public void actualizar() throws SQLException {
+		DaoNota dao = new DaoNota();
+		dao.actualizar(this);
+		System.out.println("Actualizando");
+	}
+	public void borrar(int id) throws SQLException {
+		DaoNota dao = new DaoNota();
+		dao.borrar(id);
+		System.out.println("Borrando");
 	}
 /**
  * Método toString del objeto nota

@@ -39,4 +39,24 @@
     <servlet-name>SEditar</servlet-name>
     <url-pattern>/SEditar</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SBorrar</display-name>
+    <servlet-name>SBorrar</servlet-name>
+    <servlet-class>controlador.SBorrar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SBorrar</servlet-name>
+    <url-pattern>/SBorrar</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SEditarenviar</display-name>
+    <servlet-name>SEditarenviar</servlet-name>
+    <servlet-class>controlador.SEditarenviar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SEditarenviar</servlet-name>
+    <url-pattern>/SEditarenviar</url-pattern>
+  </servlet-mapping>
 </web-app>
