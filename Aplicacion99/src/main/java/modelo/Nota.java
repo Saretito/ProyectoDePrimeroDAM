@@ -114,6 +114,7 @@ public class Nota {
 	}
 
 	/**
+	 * Metodo insertar que llama al dao e inserta un objeto con informacion en la base de datos.
 	 * @throws SQLException
 	 */
 	
@@ -125,7 +126,8 @@ public class Nota {
 
 	
 	/**
-	 * Metodo insertar que llama al dao y recibe un parametro, en este caso el id.
+	 * Metodo que recibe un parametro y llama al dao para obtener una tupla que se identifica con ese parametro.
+	 * @param Id_nota es el parametro que identifica la nota que nos va a devolver el metodo.
 	 * @throws SQLException
 	 */
 	
@@ -148,19 +150,27 @@ public class Nota {
 		json = gson.toJson(this);
 		return json;
 	}
-	
+	/**
+	 * Metodo que llama al dao para actualizar la informacion de la base de datos
+	 * @throws SQLException
+	 */
 	public void actualizar() throws SQLException {
 		DaoNota dao = new DaoNota();
 		dao.actualizar(this);
 		System.out.println("Actualizando");
 	}
+	/**
+	 * Metodo que llama al dao para eliminar una nota en la base de datos que se identifica con un id.
+	 * @param id identifica la nota a eliminar.
+	 * @throws SQLException
+	 */
 	public void borrar(int id) throws SQLException {
 		DaoNota dao = new DaoNota();
 		dao.borrar(id);
 		System.out.println("Borrando");
 	}
 /**
- * Método toString del objeto nota
+ * Metodo toString del objeto nota
  */
 
 	@Override

@@ -1,4 +1,4 @@
-@charset "ISO-8859-1";
+
 
 *{
     padding: 0%;
@@ -41,7 +41,8 @@
 
     display: grid;
     grid-template-areas: 'link1 link2';
-
+	font-size:0,9em;
+	
 }
 
 .barranav :first-child {
@@ -59,7 +60,7 @@
     grid-area: link2;
 }
 
-                                    /* Sección de notas */
+                                    /* Seccion de notas */
 .notas {
     background-color: #BADDB4;
     border-radius: 3%; /*redondea borde*/
@@ -72,6 +73,7 @@
     align-items: center; /* Centro verticalmente */
     justify-content: center; /* Centro horizontalmente */
     min-height: 100vh; /*crece*/
+font-size:0,7em;
 
 }
 
@@ -83,7 +85,7 @@
     box-shadow: 1px 1px 2px #5E472C;
     height: auto;
     width: 1000px;
-    max-height: 100%; /* limitar la altura máxima de .listado al 100% del contenedor padre */
+    max-height: 100%; /* limitar la altura maxima de .listado al 100% del contenedor padre */
     overflow-y: auto; /*  desplazamiento vertical si el contenido de .listado excede su altura */
 
 }
@@ -119,5 +121,257 @@
     text-shadow: 1px 1px 2px #669661;
 
 }
+								/*TABLET*/
+@media screen and (max-width: 768px){
+	
+*{
+    padding: 0%;
+    margin: 0%;
+}
+/* BODY */
+.cajabody {
+    width: 90%;
+    padding: 5%;
+    background-color: #669661;
+}
 
+/* HEADER */
+.barraheader {
+    border-color: #5E472C;
+    border: 2px;
+    background-color: #96BF8F;
+    top: 0%;
+    height: 50px;
+    width: 100%;
+    
+}
+
+.tituloh { 
+    font-family: 'Arial Rounded MT', Arial;
+    font-size: 1rem;
+    color: #5E472C;
+    text-shadow: 1px 1px 2px #669661;
+    text-align: center;
+    padding: 10px;
+    }
+
+/* NAV */
+.barranav {
+    background-color: #B1916E;
+    border-radius: 2%; /*redondea borde*/
+    top: 50px;
+    height: 30px;
+    width: 100%;
+
+    display: grid;
+    grid-template-areas: 'link1 link2';
+font-size:0,7em;
+}
+
+.barranav :first-child {
+    font-family: 'Arial Rounded MT', Arial;
+    color: #5E472C;
+    text-shadow: 1px 1px 2px #669661;
+
+    grid-area: link1;
+}
+.barranav :last-child {
+    font-family: 'Arial Rounded MT', Arial;
+    color: #5E472C;
+    text-shadow: 1px 1px 2px #669661;
+
+    grid-area: link2;
+}
+
+                                    /* Seccion de notas */
+.notas {
+    background-color: #BADDB4;
+    border-radius: 3%; /*redondea borde*/
+    border-color: #5E472C;
+    border-style:solid ;
+    top: 80px;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centro verticalmente */
+    justify-content: center; /* Centro horizontalmente */
+    min-height: 100vh; /*crece*/
+
+}
+
+                                    /* Notas */
+ /* Modifico todas las notas dentro del div grande */
+
+.listado{
+	background-color:#96BF8F;
+    box-shadow: 1px 1px 2px #5E472C;
+    height: auto;
+    width: 1000px;
+    max-height: 100%; /* limitar la altura maxima de .listado al 100% del contenedor padre */
+    overflow-y: auto; /*  desplazamiento vertical si el contenido de .listado excede su altura */
+
+}
+/*Notas individuales*/
+.nota{
+	border-color: #5E472C;
+    border-style:solid ;
+    box-shadow: 1px 1px 2px #5E472C;
+  
+}
+.listado h2{
+	color: #5E472C;
+font-size: 0,7rem;
+    font-family: 'Arial Rounded MT', Arial;
+    text-shadow: 1px 1px 2px #669661;
+}
+.listado p{
+	font-size: 0,5rem;
+	
+}
+
+/* FOOTER */
+.barrafoot {
+    background-color: #669661;
+    
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.barrafoot a, p {
+    color: #5E472C;
+    font-family: 'Arial Rounded MT', Arial;
+    text-shadow: 1px 1px 2px #669661;
+
+}
+}
+								/*MOVIL*/
+@media screen and (max-width: 320px){
+	*{
+    padding: 0%;
+    margin: 0%;
+}
+/* BODY */
+.cajabody {
+    width: 90%;
+    padding: 5%;
+    background-color: #669661;
+}
+
+/* HEADER */
+.barraheader {
+    border-color: #5E472C;
+    border: 1px;
+    background-color: #96BF8F;
+    top: 0%;
+    height: 50px;
+    width: 100%;
+    
+}
+
+.tituloh { 
+    font-family: 'Arial Rounded MT', Arial;
+    font-size: 0,7rem;
+    color: #5E472C;
+    text-shadow: 1px 1px 2px #669661;
+    text-align: center;
+    padding: 10px;
+    }
+
+/* NAV */
+.barranav {
+    background-color: #B1916E;
+    border-radius: 2%; /*redondea borde*/
+    top: 50px;
+    height: 30px;
+    width: 100%;
+
+    display: grid;
+    grid-template-areas: 'link1 link2';
+font-size:0,5em;
+}
+
+.barranav :first-child {
+    font-family: 'Arial Rounded MT', Arial;
+    color: #5E472C;
+    text-shadow: 1px 1px 2px #669661;
+
+    grid-area: link1;
+}
+.barranav :last-child {
+    font-family: 'Arial Rounded MT', Arial;
+    color: #5E472C;
+    text-shadow: 1px 1px 2px #669661;
+
+    grid-area: link2;
+}
+
+                                    /* Seccion de notas */
+.notas {
+    background-color: #BADDB4;
+    border-radius: 3%; /*redondea borde*/
+    border-color: #5E472C;
+    border-style:solid ;
+    top: 80px;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centro verticalmente */
+    justify-content: center; /* Centro horizontalmente */
+    min-height: 100vh; /*crece*/
+
+}
+
+                                    /* Notas */
+ /* Modifico todas las notas dentro del div grande */
+
+.listado{
+	background-color:#96BF8F;
+    box-shadow: 1px 1px 2px #5E472C;
+    height: auto;
+    width: 1000px;
+    max-height: 100%; /* limitar la altura maxima de .listado al 100% del contenedor padre */
+    overflow-y: auto; /*  desplazamiento vertical si el contenido de .listado excede su altura */
+
+}
+/*Notas individuales*/
+.nota{
+	border-color: #5E472C;
+    border-style:solid ;
+    box-shadow: 1px 1px 2px #5E472C;
+  
+}
+.listado h2{
+	color: #5E472C;
+font-size: 0,7rem;
+    font-family: 'Arial Rounded MT', Arial;
+    text-shadow: 1px 1px 2px #669661;
+}
+.listado p{
+	font-size: 0,5rem;
+	
+}
+
+/* FOOTER */
+.barrafoot {
+    background-color: #669661;
+    
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.barrafoot a, p {
+    color: #5E472C;
+    font-family: 'Arial Rounded MT', Arial;
+    text-shadow: 1px 1px 2px #669661;
+
+}
+}
 

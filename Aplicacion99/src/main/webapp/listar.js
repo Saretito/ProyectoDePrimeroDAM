@@ -76,11 +76,11 @@ function llamadaeditar(Id_nota) {
     window.location.href = "editarnota.html?Id_nota=" + Id_nota; // Redirige a editarnota.html con el parámetro Id_nota
 }
 
-/////////////////////////////////////
+/////////////////////////////////////BORRAR////////////////////////////////////////
     
 	
 function llamadaborrar(id_nota) {
-    let estasseguro = confirm("¿Estás seguro de que deseas borrar esta nota?");
+    let estasseguro = confirm("Seguro de que deseas borrar esta nota?");
     let id = id_nota
     if (estasseguro) {
 	

@@ -79,7 +79,11 @@ cree un objeto. (no olvidar poner el método insertar en la clase-Nota).
 		System.out.println("DAO: ACTUALIZANDO");
 	} 
 	
-	
+	/**
+	 * Metodo para borrar la informacion de un objeto determinado por su id.
+	 * @param id Es el parametro que localiza la nota que identica el boton pulsado.
+	 * @throws SQLException
+	 */
 	public void borrar(int id) throws SQLException {
 		String sql = "DELETE FROM notas WHERE Id_nota=?";
 		PreparedStatement ps = con.prepareStatement(sql);
